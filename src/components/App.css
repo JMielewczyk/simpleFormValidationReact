@@ -1,47 +1,97 @@
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 body {
-background: linear-gradient(-45deg, #9b7979, #4653eb );
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  
+.inputsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    width: 90vw;
+    min-width: 300px;
+    max-width: 500px;
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 8px;
+    gap: 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0 0 8px;
-  padding: 20px;
+.inputsWrapper label{
+    display: flex;
+    line-height: 30px;
+    gap: 10px;
 }
 
-form label {
-  display: flex;
-  width: 100%;
-  max-width: 500px;
-  justify-content: flex-start;
-  gap: 10px;
+input {
+    background: linear-gradient(45deg, #fff 60%, #5a5a5a) padding-box,
+            linear-gradient(45deg, rgb(255, 255, 255) 50%, rgb(148, 148, 148)) border-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    transition: .2s;
 }
 
-.error {
-  color: rgb(131, 24, 24);
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px rgb(0, 0, 0);
 }
 
-.submitBtn {
-  height: 25px;
+.inputCheckbox, .inputCheckbox:focus {
+    box-shadow: none;
+}
+
+.textInput, .dateInput {
+    height: 30px;
+}
+
+.addTaskBtn {
+    align-self: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    transition: .1s;
+    background-color: white;
+    box-shadow: 0 1px 5px 1px black;
+}
+
+.addTaskBtn:active {
+    transform: translateY(10%);
+    box-shadow: 0 0 5px 3px rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.tasksWrapper {
+    max-width: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px;
+}
+
+.singleTaskWrapper {
+    max-width: 500px;
+    display: flex;
+    gap: 15px;
 }
