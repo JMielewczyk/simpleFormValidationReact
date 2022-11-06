@@ -54,7 +54,11 @@ const Form = (props) => {
             By się zapisać potwierdź akceptację regulaminu
           </p>
         ) : null}
-        <input type="submit" onClick={props.handleSubmit} />
+        <input
+          type="submit"
+          className="submitBtn"
+          onClick={props.handleSubmit}
+        />
       </form>
     </>
   );
