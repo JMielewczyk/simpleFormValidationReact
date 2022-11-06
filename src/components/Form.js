@@ -3,7 +3,7 @@ import React from "react";
 const Form = (props) => {
   return (
     <>
-      <form>
+      <form onSubmit={props.handleSubmit} noValidate>
         <label>
           Twoje imię:
           <input
@@ -54,11 +54,7 @@ const Form = (props) => {
             By się zapisać potwierdź akceptację regulaminu
           </p>
         ) : null}
-        <input
-          type="submit"
-          className="submitBtn"
-          onClick={props.handleSubmit}
-        />
+        <input type="submit" className="submitBtn" />
       </form>
     </>
   );
